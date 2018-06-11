@@ -7,4 +7,4 @@ RUN  apk update && apk add rsync nodejs yarn openssh-client git bash && \
      echo "{ eval $(ssh-agent) } &> /dev/null" >  ~/.bashrc 
 
 WORKDIR /root
-ENTRYPOINT ["/bin/bash"]
+ENTRYPOINT ["/bin/bash", "-l", "-c"]
