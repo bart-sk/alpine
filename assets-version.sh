@@ -1,3 +1,3 @@
 #!/bin/bash
-sed -ie "s/{{GIT_COUNTER}}/`git rev-list --all --count`/" $1
+sed -ie "s/{{GIT_COUNTER}}/`git rev-parse --verify HEAD`/" $1
 
